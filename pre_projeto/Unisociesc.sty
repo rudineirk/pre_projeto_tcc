@@ -1,0 +1,194 @@
+%--------------------------------------------------------------------------------------------
+% UNISOCIESC - CENTRO UNIVERSITÁRIO SOCIESC
+% Modelo Padrão para trabalho de conclusão de curso
+%
+% Autor: Profº MEng. Alcir Mário Trainotti Filho
+% Data última atualização: 01/08/2014
+%--------------------------------------------------------------------------------------------
+%  Pré-projeto para trabalhos de conclusão de curso
+%
+% OBS: Não altere esse arquivo. Novas versões podem ser disponibilizadas.
+%--------------------------------------------------------------------------------------------
+
+%--------------------------------------------------------------------------------------------
+% Pacotes
+%--------------------------------------------------------------------------------------------
+% Pacotes básicos
+\usepackage[T1]{fontenc}        % Selecao de codigos de fonte.
+\usepackage[utf8]{inputenc}     % Codificacao do documento (conversão automática dos acentos)
+\usepackage{indentfirst}        % Indenta o primeiro parágrafo de cada seção.
+\usepackage{nomencl}            % Lista de simbolos
+\usepackage{color}              % Controle das cores
+\usepackage{graphicx}           % Inclusão de gráficos
+\usepackage{microtype}          % para melhorias de justificação
+\usepackage[scaled]{DejaVuSans}
+\usepackage[alf,abnt-emphasize=bf]{abntex2cite}
+
+% Pacotes de citação
+\usepackage[brazilian,hyperpageref]{backref}     % Paginas com as citações na bibl
+\usepackage[alf]{abntex2cite}                    % Citações padrão ABNT
+
+% Colocar título da imagem negrito
+\usepackage[font=small,format=plain,labelfont=bf,up,textfont=bf,up]{caption}
+
+% Formatando os espaçamentos do documento
+\setlrmarginsandblock{3cm}{2cm}{*}
+\setlength{\parindent}{1.25cm}        % espaço entre a margem e o início da frase do parágrafo
+\setlength{\parskip}{0cm}             % espaçamento entre um parágrafo e outro
+\checkandfixthelayout
+
+%Usando Arial Tanto para Texto Quanto para Titulo
+\renewcommand{\rmdefault}{phv}\renewcommand{\sfdefault}{phv}
+% ---
+
+% Formatar capitulos numerados
+\def\@makechapterhead#1{
+  \noindent\textbf{
+    \textsf{\thechapter\hspace{.2cm}{#1}}
+  }
+  \vspace*{0.7cm}\par
+}
+
+% Formatar capitulos nao numerados
+\def\@makeschapterhead#1{
+  \begin{center} {
+    \noindent\centering\textbf{
+      \textsf{#1}
+    }
+  }
+  \end{center}
+  \par
+}
+
+% Formatar Secao e subsecao numerados
+\renewcommand\section{
+  \@startsection {section}{1}{\z@}
+                 {-2.5ex \@plus -1ex \@minus -.2ex}
+                 { 2.3ex \@plus .1ex}
+                 {\noindent\normalfont\normalsize\textbf}
+}
+\renewcommand\subsection{
+  \@startsection {subsection}{2}{\z@}
+                 {-2.5ex \@plus -1ex \@minus -.2ex}
+                 { 2.3ex \@plus .1ex}
+                 {\noindent\normalfont\normalsize\textbf}
+}
+\renewcommand\subsubsection{
+  \@startsection {subsubsection}{3}{\z@}
+                 {-2.5ex \@plus -1ex \@minus -.2ex}
+                 { 2.3ex \@plus .1ex}
+                 {\noindent\normalfont\normalsize}
+}
+
+%% Definindo o cabeçalho do documento
+\newcommand{\cabecalho}{
+  \begin{figure}[htb]
+    \begin{minipage}[c]{0.2\linewidth}
+      \includegraphics[width=1\textwidth]{imagens/unisociesc.jpg}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[c]{0.8\linewidth}
+      \begin{tabular}{|p{13cm}|}
+        \hline
+        \\ \\
+        \hspace{50pt}
+        \textbf{APRESENTAÇÃO DA PROPOSTA PARA O PROJETO}
+        \\ \\ \\
+        \hline
+      \end{tabular}
+    \end{minipage}
+  \end{figure}
+
+  \vspace{-.5cm}
+
+  \begin{figure}[htb]
+    \begin{minipage}[c]{1\linewidth}
+      \begin{tabular}{|p{16.1cm}|}
+        \hline
+        \textbf{Nome(s) do(s) aluno(s):} \\
+        \primeiroAutor \\
+        %\segundoAutor \\
+        %\terceiroAutor \\
+        %\quartoAutor \\
+        \hline
+        \textbf{Nome da Linha de Pesquisa do Curso que o Projeto estará Vinculado:}\\
+        \linhaPesquisa \\
+        \hline
+        \textbf{(\pesquisa)Pesquisa \hspace*{200pt}(\projetoExtensao)Projeto Extensão}\\
+        \\
+        \textbf{Data de Aprovação:}
+        \datahoje \\
+        \hline
+        \textbf{Título do Projeto:}\\
+        \titulo \\
+        \hline
+        \textbf{Nome do(a) Professor(a) Orientador(a):}\\
+        \professorOrientador \\
+        \hline
+      \end{tabular}
+    \end{minipage}
+  \end{figure}
+
+  \vspace{-.25cm}
+
+  \begin{figure}[htb]
+    \begin{minipage}[c]{1\linewidth}
+      \textbf{Plano de Estudo:}
+    \end{minipage}
+  \end{figure}
+}
+
+%% Definindo a aprovação
+\newcommand{\aprovacao}{
+  \vspace{3cm}
+  \begin{center}
+    Assinatura do(a) Professor(a) Orientador(a)
+  \end{center}
+
+  \vspace{2cm}
+  \begin{center}
+    Assinatura do(a) Aluno(a)
+    \hspace{5cm}
+    Assinatura do(a) Aluno(a)
+  \end{center}
+}
+
+% ---
+% Altera as margens padrões
+% ---
+\setlrmarginsandblock{3cm}{3cm}{*}
+\setulmarginsandblock{3cm}{3cm}{*}
+\checkandfixthelayout
+% ---
+
+% ---
+% Espaçamentos entre linhas e parágrafos
+% ---
+
+% O tamanho do parágrafo é dado por:
+%\setlength{\parindent}{1.3cm}
+
+% Controle do espaçamento entre um parágrafo e outro:
+%\setlength{\parskip}{0.2cm}  % tente também \onelineskip
+
+% Espaçamento simples
+\SingleSpacing
+
+% Configurações de aparência do PDF final
+% informações do PDF
+\makeatletter
+\hypersetup{
+  %pagebackref=true,
+  pdftitle={\@title},
+  pdfauthor={\@author},
+  pdfsubject={Modelo de pré-projeto com abnTeX2},
+  pdfcreator={LaTeX with abnTeX2},
+  pdfkeywords={abnt}{latex}{abntex}{abntex2}{Pré Projeto},
+  colorlinks=true,         % false: boxed links; true: colored links
+  linkcolor=black,         % color of internal links
+  citecolor=black,         % color of links to bibliography
+  filecolor=magenta,       % color of file links
+  urlcolor=blue,
+  bookmarksdepth=4
+}
+\makeatother

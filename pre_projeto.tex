@@ -1,0 +1,36 @@
+\documentclass[
+  article,      % indica que é um artigo acadêmico
+  11pt,         % tamanho da fonte
+  oneside,      % para impressão apenas no verso. Oposto a twoside
+  a4paper,      % tamanho do papel.
+  english,      % idioma adicional para hifenização
+  brazil,       % o último idioma é o principal do documento
+  sumario=tradicional
+]{abntex2}
+
+\usepackage{pre_projeto/Unisociesc}
+
+% Início do artigo
+\begin{document}
+
+  \OnehalfSpacing  % Ajusta espaçamento entre linhas para 1,5
+  \input{pre_projeto/variaveis}
+  \cabecalho
+
+  % Elementos textuais do trabalho
+  \input{pre_projeto/tema}
+  \input{pre_projeto/problema}
+  \input{pre_projeto/hipoteses}
+  \input{pre_projeto/justificativa}
+  \input{pre_projeto/objetivoGeral}
+  \input{pre_projeto/objetivoEspecifico}
+  \input{pre_projeto/metodologia}
+  \input{pre_projeto/referencialTeorico}
+  \input{pre_projeto/cronograma}
+
+  \renewcommand{\bibname}{REFER\^ENCIAS}
+  \bibliography{pre_projeto/bibliografia}
+
+  \aprovacao
+
+\end{document}
