@@ -2,11 +2,11 @@ TEX = pdflatex -shell-escape -interaction=nonstopmode -file-line-error
 PRE = $(TEX) -ini &pdflatex
 BIB = bibtex
 
-.PHONY: all view clear
+.PHONY: all view clean
 
 all : pre_projeto.pdf
 
-clear :
+clean :
 	rm -rf build/ *.aux *.bbl *.blg *.dvi *.lof *.log *.lot *.backup *.toc *.pdf
 
 view :
