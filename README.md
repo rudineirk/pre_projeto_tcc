@@ -7,15 +7,15 @@ Para compilar a partir dos fontes, é necessário a instalação do LaTeX.
 Para instalar no Ubuntu e derivados use o comando abaixo:
 
 ```sh
-sudo apt-get install texlive-full
+sudo apt-get install texlive-full latexmk make
 ```
 
 Para instalar no Fedora use o comando abaixo:
 
 ```sh
-sudo dnf install texlive-scheme-full
+sudo dnf install texlive-scheme-full latexmk make
 # ou
-sudo yum install texlive-scheme-full
+sudo yum install texlive-scheme-full latexmk make
 ```
 
 depois rode o script de compilação
